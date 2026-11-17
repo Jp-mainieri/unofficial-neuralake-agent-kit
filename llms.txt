@@ -1,0 +1,14 @@
+# Unofficial NeuraLake Agent Kit (não afiliado à NeuraLake)
+
+> Ensina agentes de IA a usar a API de inferência NeuraLake (compatível com OpenAI, base URL https://api.neuralake.cloud/v1).
+
+- [AGENTS.md](AGENTS.md): regras essenciais e esqueleto de código
+- [Skill](skills/neuralake/SKILL.md): skill instalável
+- [Capacidades e preços](docs/capabilities.md)
+- [Autenticação e setup](docs/setup.md)
+- [Streaming](docs/streaming.md)
+- [Erros e retry](docs/errors.md)
+- [Conta, custos e segurança](docs/account-safety.md)
+- [MCP](mcp-server/README.md)
+- [Lacunas / não verificado](docs/gaps.md)
+- [Exemplos](examples/)
