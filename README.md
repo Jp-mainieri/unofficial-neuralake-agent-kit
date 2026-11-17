@@ -6,6 +6,10 @@
 
 Repositório para ensinar **qualquer agente de IA** a usar a API de inferência NeuraLake (compatível com OpenAI).
 
+## Como obter uma chave de API
+Sites oficiais da NeuraLake: [neuralake.global](https://neuralake.global) · [neuralake.com.br](https://neuralake.com.br).
+Pelo botão "Start inferencing" você chega ao beta ([beta.neuraserver.cloud](https://beta.neuraserver.cloud)): crie a conta ou entre e gere a chave no menu **More > Keys**. Guarde-a só em `NEURALAKE_API_KEY` (veja `.env.example`).
+
 ## Como usar
 - **Qualquer agente** (Codex, Cursor, Copilot, Aider…): aponte para `AGENTS.md` (ou `llms.txt`).
 - **Claude Code:** copie `skills/neuralake/` para `~/.claude/skills/` (ou `.claude/skills/` do projeto).
