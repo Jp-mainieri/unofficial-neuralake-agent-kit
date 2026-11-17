@@ -21,7 +21,7 @@ Repositório para ensinar **qualquer agente de IA** a usar a API de inferência 
 | `SECURITY.md`, `scripts/check_secrets.sh` | Regras anti-vazamento e verificação |
 | `examples/` | Python, Node e cURL |
 | `scripts/smoke_test.py` | Teste de conexão sem dependências |
-| `assets/`, `demo/` | Banner animado (SVG/CSS, funciona no GitHub) e demo interativa 🪼 (`python3 -m http.server` e abra `demo/index.html`) |
+| `assets/`, `demo/` | Banner animado (SVG/CSS, funciona no GitHub) e demo 🪼 do personagem **Jelly**, feito com [procedural-bot-animations](https://github.com/Jp-mainieri/procedural-bot-animations) (`python3 -m http.server` e abra `demo/index.html`). `demo/jellyfish.character.json` é importável no Studio; `demo/handmade.html` é a versão sem dependências |
 | `evals/checklist.md` | Como verificar se o agente aprendeu |
 
 ## Status
