@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.svg" alt="Unofficial NeuraLake Agent Kit" width="100%"></p>
+<p align="center"><img src="assets/banner-animated.svg" alt="Unofficial NeuraLake Agent Kit" width="100%"></p>
 
 # 🪼 Unofficial NeuraLake Agent Kit
 
@@ -21,6 +21,7 @@ Repositório para ensinar **qualquer agente de IA** a usar a API de inferência 
 | `SECURITY.md`, `scripts/check_secrets.sh` | Regras anti-vazamento e verificação |
 | `examples/` | Python, Node e cURL |
 | `scripts/smoke_test.py` | Teste de conexão sem dependências |
+| `assets/`, `demo/` | Banner animado (SVG/CSS, funciona no GitHub) e demo interativa 🪼 (`python3 -m http.server` e abra `demo/index.html`) |
 | `evals/checklist.md` | Como verificar se o agente aprendeu |
 
 ## Status

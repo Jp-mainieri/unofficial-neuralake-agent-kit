@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="t d">
+  <title id="t">Unofficial NeuraLake Agent Kit</title>
+  <desc id="d">An animated glowing jellyfish above the project name</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1026"/><stop offset="1" stop-color="#101a4a"/></linearGradient>
+    <radialGradient id="bell" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#9fb4ff"/><stop offset=".6" stop-color="#5b7bff"/><stop offset="1" stop-color="#3a4fd6"/></radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <style>
+    .box{transform-box:fill-box}
+    /* um ciclo de natação ~4,2 s: contrai (jato) e relaxa (deriva) */
+    #jelly{animation:swim 4.2s cubic-bezier(.45,0,.35,1) infinite}
+    #bell,#halo{transform-origin:50% 100%;animation:pulse 4.2s cubic-bezier(.45,0,.35,1) infinite}
+    .t{transform-origin:50% 0;animation:sway 3.1s ease-in-out infinite}
+    .t1{animation-duration:3.7s;animation-delay:-.4s}
+    .t2{animation-duration:2.9s;animation-delay:-1.3s}
+    .t3{animation-duration:3.4s;animation-delay:-2.1s}
+    .t4{animation-duration:3.1s;animation-delay:-.9s}
+    .t5{animation-duration:3.9s;animation-delay:-1.8s}
+    #trail{animation:trail 4.2s cubic-bezier(.45,0,.35,1) infinite;transform-origin:50% 0}
+    .s{animation:tw 3s ease-in-out infinite}.s2{animation-delay:-1s}.s3{animation-delay:-2s;animation-duration:4s}
+    @keyframes swim{0%{transform:translate(250px,52px)}22%{transform:translate(250px,30px)}60%{transform:translate(250px,44px)}100%{transform:translate(250px,52px)}}
+    @keyframes pulse{0%{transform:scale(1,1)}20%{transform:scale(.9,1.09)}55%{transform:scale(1.04,.96)}100%{transform:scale(1,1)}}
+    @keyframes trail{0%{transform:scaleY(1)}22%{transform:scaleY(1.1)}60%{transform:scaleY(.95)}100%{transform:scaleY(1)}}
+    @keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+    @keyframes tw{0%,100%{opacity:.25}50%{opacity:.9}}
+    @media (prefers-reduced-motion:reduce){#jelly{animation:none;transform:translate(250px,40px)}#bell,#halo,.t,#trail,.s{animation:none}}
+  </style>
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <g fill="#cfd8ff">
+    <circle class="s" cx="90" cy="70" r="2"/><circle class="s s2" cx="210" cy="320" r="3"/><circle class="s s3" cx="420" cy="50" r="2"/>
+    <circle class="s s2" cx="1100" cy="90" r="3"/><circle class="s" cx="980" cy="330" r="2"/><circle class="s s3" cx="800" cy="40" r="2"/>
+  </g>
+  <g id="jelly">
+    <ellipse id="halo" class="box" cx="0" cy="80" rx="110" ry="80" fill="#5b7bff" opacity=".45" filter="url(#glow)"/>
+    <g id="trail" class="box" fill="none" stroke="#8fa6ff" stroke-width="6" stroke-linecap="round" opacity=".9">
+      <g class="t t1 box"><path d="M-70 130 q-14 40 6 70 t-4 80"/></g>
+      <g class="t t2 box"><path d="M-35 135 q-12 45 8 80 t-6 85"/></g>
+      <g class="t t3 box"><path d="M0 138 q-10 50 10 85 t-4 95"/></g>
+      <g class="t t4 box"><path d="M35 135 q12 45 -8 80 t6 85"/></g>
+      <g class="t t5 box"><path d="M70 130 q14 40 -6 70 t4 80"/></g>
+    </g>
+    <g id="bell" class="box">
+      <path d="M-105 125 A105 105 0 0 1 105 125 Q80 108 52 126 Q26 108 0 126 Q-26 108 -52 126 Q-80 108 -105 125 Z" fill="url(#bell)"/>
+      <ellipse cx="-34" cy="62" rx="34" ry="14" fill="#fff" opacity=".28" transform="rotate(-24 -34 62)"/>
+    </g>
+  </g>
+  <g font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" fill="#fff">
+    <text x="470" y="170" font-size="64" font-weight="700">Unofficial NeuraLake</text>
+    <text x="470" y="238" font-size="64" font-weight="700" fill="#9fb4ff">Agent Kit</text>
+    <text x="470" y="292" font-size="24" fill="#cfd8ff">Teach any AI agent to use the NeuraLake API.</text>
+    <text x="470" y="330" font-size="18" fill="#8fa0d8">Community project · not affiliated with NeuraLake · MIT</text>
+  </g>
+</svg>
