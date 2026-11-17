@@ -12,8 +12,9 @@ API compatível com o SDK da OpenAI. Só muda `base_url` e a chave.
 2. Use `base_url="https://api.neuralake.cloud/v1"`.
 3. Escolha `model` entre: `text`, `reasoning`, `reasoning-pro`, `code`, `multimodal`, `auto`. Comece barato (`text`/`auto`).
 4. Chame `client.chat.completions.create(...)`. Para respostas longas, use `stream=True`.
-5. Trate erros: 401 → chave inválida (pare e avise); 429 → espere com backoff exponencial; 500 → tente de novo algumas vezes; 400 → corrija a requisição.
-6. Valide com `scripts/smoke_test.py` antes de integrar.
+5. Use `max_tokens` ≥ 300–400 (tokens de raciocínio contam) e verifique `finish_reason`. Tool calling, JSON mode e imagens funcionam; embeddings não existem.
+6. Trate erros: 401 → chave inválida (pare e avise); 429 → espere (`RateLimit-Reset`, limite 100 req/60 s); 500 → tente de novo algumas vezes; 400 → corrija a requisição.
+7. Valide com `scripts/smoke_test.py` antes de integrar.
 
 ## Referências
 - Visão geral e regras: `AGENTS.md`

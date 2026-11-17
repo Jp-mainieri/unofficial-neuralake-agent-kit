@@ -12,6 +12,7 @@ r = client.chat.completions.create(
         {"role": "user", "content": "Explique o que é um data lake em 2 frases."},
     ],
     temperature=0.5,
-    max_tokens=200,
+    max_tokens=400,  # modelos de raciocínio gastam tokens antes de responder
 )
-print(r.choices[0].message.content)
+c = r.choices[0]
+print(c.message.content or f"(vazio; finish_reason={c.finish_reason}: aumente max_tokens)")

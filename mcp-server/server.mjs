@@ -20,7 +20,7 @@ const CATALOG = {
 const scrub = (s) => {
   let out = String(s);
   if (KEY) out = out.split(KEY).join("[REDACTED]");
-  return out.replace(/nl_[A-Za-z0-9]{8,}/g, "nl_[REDACTED]");
+  return out.replace(/nlk?[_-][A-Za-z0-9]{8,}/g, "nl*_[REDACTED]");
 };
 
 const tools = [

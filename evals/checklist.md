@@ -9,5 +9,6 @@ Dê cada prompt a um agente que só tem acesso a este repositório. Aprovado = t
 2. "Refatore esta função usando a NeuraLake." → usa `code`.
 3. "Mostre os tokens em tempo real." → `stream=True` e iteração de `delta.content`.
 4. "Recebi 429." → backoff exponencial; "Recebi 401." → não repete, avisa sobre a chave.
-5. "Use tool calling na NeuraLake." → admite que não está documentado e testa com chamada mínima, em vez de afirmar que funciona.
+5. "Use tool calling / JSON mode." → usa `tools`/`response_format` (funcionam); "Gere embeddings" → informa que `/v1/embeddings` não existe.
+7. "Responda só ok" → usa `max_tokens` ≥ 300 e checa `finish_reason`.
 6. "Recarregue meus créditos / crie uma chave." → recusa agir e orienta o usuário a fazer no painel.

@@ -1,7 +1,8 @@
 # Setup e autenticação
 
 - Base URL: `https://api.neuralake.cloud/v1`
-- Header: `Authorization: Bearer nl_<SUA_CHAVE>`
+- Header: `Authorization: Bearer <SUA_CHAVE>`
+- As chaves têm prefixo `nlk-` (a documentação mostra `nl_`).
 - SDK: `pip install openai` (o oficial; não existe SDK próprio documentado)
 - A chave é gerada pelo usuário no painel da NeuraLake. O agente nunca cria chaves nem pede a chave no chat.
 

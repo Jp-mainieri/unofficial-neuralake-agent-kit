@@ -9,12 +9,17 @@ if not key:
 model = sys.argv[1] if len(sys.argv) > 1 else "text"
 req = urllib.request.Request(
     f"{BASE}/chat/completions",
-    data=json.dumps({"model": model, "max_tokens": 20,
+    data=json.dumps({"model": model, "max_tokens": 400,
                      "messages": [{"role": "user", "content": "Responda apenas: ok"}]}).encode(),
     headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
 try:
     with urllib.request.urlopen(req, timeout=60) as r:
-        print("OK", r.status, json.load(r)["choices"][0]["message"]["content"])
+        j = json.load(r)
+        c = j["choices"][0]
+        print("OK", r.status, repr(c["message"]["content"]), "finish:", c.get("finish_reason"),
+              "| rate limit restante:", r.headers.get("RateLimit-Remaining"))
+        if not c["message"]["content"]:
+            print("AVISO: content vazio (tokens de raciocínio consumiram max_tokens); aumente max_tokens.")
 except urllib.error.HTTPError as e:
     hints = {400: "requisição inválida", 401: "chave inválida/ausente",
              429: "rate limit: aguarde", 500: "erro do servidor: tente de novo"}

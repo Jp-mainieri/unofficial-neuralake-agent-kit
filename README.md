@@ -22,4 +22,4 @@ Repositório para ensinar **qualquer agente de IA** a usar a API de inferência 
 | `evals/checklist.md` | Como verificar se o agente aprendeu |
 
 ## Status
-Baseado na documentação do painel beta (2026-11-17). O que não foi verificado está em `docs/gaps.md`. Exemplos de código ainda não foram executados contra a API (sem chave de teste).
+Baseado na documentação do painel beta (2026-11-17). O que não foi verificado está em `docs/gaps.md`. Testado contra a API real em 2026-11-17 (smoke test, capacidades, streaming, JSON mode, tool calling, imagem, MCP).

@@ -11,10 +11,12 @@ Você não usa um SDK próprio: troque `base_url` e a chave.
 
 ## Regras essenciais
 1. **Base URL:** `https://api.neuralake.cloud/v1` (é a API; o painel web é outro endereço).
-2. **Auth:** header `Authorization: Bearer nl_...`. A chave vem da variável de ambiente `NEURALAKE_API_KEY`. Nunca escreva a chave no código, em logs ou em commits.
+2. **Auth:** header `Authorization: Bearer <chave>` (chaves têm prefixo `nlk-`; a doc mostra `nl_`). A chave vem da variável de ambiente `NEURALAKE_API_KEY`. Nunca escreva a chave no código, em logs ou em commits.
 3. **Modelo = capacidade, não ID de modelo.** Use apenas: `text`, `reasoning`, `reasoning-pro`, `code`, `multimodal`, `auto`.
 4. **Endpoint principal:** `chat/completions` (formato OpenAI). Streaming com `stream=True`.
-5. **Erros:** 400 (parâmetros/JSON), 401 (chave), 429 (rate limit → backoff), 500 (tentar de novo).
+5. **Erros:** corpo `{"error":"..."}`. 400 (parâmetros/modelo), 401 (chave), 429 (rate limit: 100 req/60 s; use o header `RateLimit-Reset`), 500 (tentar de novo).
+6. **`max_tokens` ≥ 300–400:** tokens de raciocínio contam no limite; com valor baixo o `content` vem vazio (`finish_reason: length`).
+7. **Funciona (testado):** streaming, JSON mode, tool calling, imagens (data URI) em `multimodal`. **Não existe:** `/v1/embeddings`, `/v1/models`.
 
 ## Escolha da capacidade
 | Tarefa | `model` |
