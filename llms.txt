@@ -1,4 +1,4 @@
-# Unofficial NeuraLake Agent Kit (não afiliado à NeuraLake)
+# 🪼 Unofficial NeuraLake Agent Kit (não afiliado à NeuraLake)
 
 > Ensina agentes de IA a usar a API de inferência NeuraLake (compatível com OpenAI, base URL https://api.neuralake.cloud/v1).
 

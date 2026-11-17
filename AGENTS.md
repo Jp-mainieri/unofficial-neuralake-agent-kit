@@ -1,6 +1,6 @@
 > **Aviso:** kit não oficial, sem vínculo com a NeuraLake. Veja o README.
 
-# AGENTS.md — Como usar a NeuraLake
+# 🪼 AGENTS.md — Como usar a NeuraLake
 
 Leia este arquivo antes de escrever qualquer código que chame a NeuraLake.
 Detalhes: `docs/`. Skill instalável: `skills/neuralake/SKILL.md`.

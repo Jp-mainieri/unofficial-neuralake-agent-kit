@@ -1,4 +1,6 @@
-# Unofficial NeuraLake Agent Kit
+<p align="center"><img src="assets/banner.svg" alt="Unofficial NeuraLake Agent Kit" width="100%"></p>
+
+# 🪼 Unofficial NeuraLake Agent Kit
 
 > **Aviso / Disclaimer:** projeto **não oficial**, mantido pela comunidade, sem vínculo, patrocínio ou endosso da NeuraLake. "NeuraLake" é nome/marca de seus respectivos donos, usado só para identificar o serviço. Informações podem estar desatualizadas (baseadas no beta, nov/2026): consulte a documentação oficial. This is an unofficial, community project, not affiliated with or endorsed by NeuraLake. Licença: MIT.
 
